@@ -23,13 +23,13 @@ public class ExampleTemplate extends PolymerTemplate<ExampleModel> {
 
     public ExampleTemplate() {
         // Set the initial value to the "value" property.
-        getModel().setValue("Not clicked");
+        this.getModel().setValue("Not clicked");
     }
 
     /*
      * Allow setting the value property from outside of the class.
      */
     public void setValue(String value) {
-        getModel().setValue(value);
+        this.getModel().setValue(value);
     }
 }

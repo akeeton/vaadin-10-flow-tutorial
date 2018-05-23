@@ -13,12 +13,12 @@ import com.vaadin.flow.router.Route;
 public class MainView extends VerticalLayout {
 
     public MainView() {
-        ExampleTemplate template = new ExampleTemplate();
+        ExampleTemplate myTemplate = new ExampleTemplate();
 
-        Button button = new Button("Click me",
-                event -> template.setValue("Clicked!"));
+        Button button = new Button("Click me 3",
+                event -> myTemplate.setValue("Clicked!"));
 
-        add(button, template);
+        add(button, myTemplate);
         setClassName("main-layout");
     }
 }
