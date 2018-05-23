@@ -11,7 +11,7 @@ import com.vaadin.ExampleTemplate.ExampleModel;
  */
 @Tag("example-template")
 @HtmlImport("src/example-template.html")
-class ExampleTemplate extends PolymerTemplate<ExampleModel> {
+public class ExampleTemplate extends PolymerTemplate<ExampleModel> {
 
     /**
      * Template model which defines the single "value" property.
@@ -29,7 +29,7 @@ class ExampleTemplate extends PolymerTemplate<ExampleModel> {
     /*
      * Allow setting the value property from outside of the class.
      */
-    void setValue(String value) {
+    public void setValue(String value) {
         getModel().setValue(value);
     }
 }
