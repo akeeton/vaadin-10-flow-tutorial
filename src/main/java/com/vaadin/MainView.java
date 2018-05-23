@@ -10,7 +10,7 @@ import com.vaadin.flow.router.Route;
  */
 @HtmlImport("styles/shared-styles.html")
 @Route("")
-public class MainView extends VerticalLayout {
+class MainView extends VerticalLayout {
 
     public MainView() {
         ExampleTemplate template = new ExampleTemplate();
