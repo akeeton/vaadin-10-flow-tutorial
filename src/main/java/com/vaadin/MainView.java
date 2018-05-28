@@ -21,6 +21,7 @@ public class MainView extends VerticalLayout {
     private CustomerService service = CustomerService.getInstance();
     private Grid<Customer> grid = new Grid<>();
     private TextField filterText = new TextField();
+    private CustomerForm form = new CustomerForm(this);
 
     public MainView() {
         filterText.setPlaceholder("Filter by name...");
@@ -38,7 +39,12 @@ public class MainView extends VerticalLayout {
         grid.addColumn(Customer::getLastName).setHeader("Last name");
         grid.addColumn(Customer::getStatus).setHeader("Status");
 
-        add(filtering, grid);
+        HorizontalLayout main = new HorizontalLayout(grid, form);
+        main.setAlignItems(Alignment.START);
+        main.setSizeFull();
+
+        add(filtering, main);
+
         setHeight("100vh");
         updateList();
     }
