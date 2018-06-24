@@ -1,12 +1,10 @@
 package com.vaadin;
 
 import com.vaadin.flow.component.html.Div;
-import com.vaadin.flow.router.BeforeEvent;
-import com.vaadin.flow.router.HasUrlParameter;
-import com.vaadin.flow.router.Route;
-import com.vaadin.flow.router.WildcardParameter;
+import com.vaadin.flow.router.*;
 
 @Route("greet")
+@PageTitle("greet")
 public class HasUrlParameterExample1 extends Div implements HasUrlParameter<String> {
     @Override
     public void setParameter(BeforeEvent beforeEvent, @WildcardParameter String s) {
