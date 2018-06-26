@@ -10,10 +10,13 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.data.value.ValueChangeMode;
 import com.vaadin.flow.router.Route;
+import com.vaadin.flow.theme.Theme;
+import com.vaadin.flow.theme.lumo.Lumo;
 
 /**
  * The main view contains a button and a template element.
  */
+@Theme(value = Lumo.class, variant = Lumo.DARK)
 @HtmlImport("styles/shared-styles.html")
 @Route("")
 public class MainView extends VerticalLayout {
@@ -56,9 +59,7 @@ public class MainView extends VerticalLayout {
         setHeight("100vh");
         updateList();
 
-        grid.asSingleSelect().addValueChangeListener(event -> {
-            form.setCustomer(event.getValue());
-        });
+        grid.asSingleSelect().addValueChangeListener(event -> form.setCustomer(event.getValue()));
     }
 
     public void updateList() {
